@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thalassemia - GenEase</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ECFDF5;
+  color: #0F172A;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #10B981;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background: #E5E7EB;
+  color: #0F172A;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #065F46;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  color: #064E3B;
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  color: #065F46;
+  margin-bottom: 12px;
+}
+
+.box p {
+  line-height: 1.7;
+  color: #334155;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #D1FAE5;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #A7F3D0;
+}
+
+.card h3 {
+  color: #065F46;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #064E3B;
+}
+
+/* FOOTER */
+footer {
+  background: #065F46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* CHART */
+.chart-container {
+  margin-top: 20px;
+  width: 300px;
+ height: 300px; 
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">GenEase</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Thalassemia</h1>
+  <p>
+    Thalassemia is a genetic blood disorder caused by reduced production of hemoglobin,
+    leading to anemia and abnormal red blood cells.
+  </p>
+</section>
+
+<div class="container">
+
+  <!-- WHAT -->
+  <div class="box">
+    <h2>What is Thalassemia?</h2>
+    <p>
+      Thalassemia is an inherited disorder where the body produces less hemoglobin than normal.
+      This causes red blood cells to break down easily and leads to chronic anemia.
+    </p>
+  </div>
+
+  <!-- GENES -->
+  <div class="box">
+    <h2>Genes Involved</h2>
+    <p>
+      Thalassemia is caused by mutations in:
+    </p>
+    <ul style="margin-left:20px; line-height:1.8;">
+      <li><b>HBB gene</b> → Beta Thalassemia</li>
+      <li><b>HBA1 / HBA2 genes</b> → Alpha Thalassemia</li>
+    </ul>
+
+    <p>
+      These genes control hemoglobin chain production. Mutations reduce hemoglobin levels.
+    </p>
+  </div>
+
+  <!-- INHERITANCE -->
+  <div class="box">
+    <h2>Inheritance Pattern</h2>
+    <p>
+      Thalassemia follows an <b>autosomal recessive inheritance pattern</b>.
+    </p>
+    <p>
+      A person must inherit two faulty genes (one from each parent) to develop the disease.
+    </p>
+    <p>
+      Carriers usually have mild or no symptoms.
+    </p>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <div class="box">
+    <h2>Symptoms</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Fatigue</h3>
+        <p>Due to low hemoglobin levels.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pale Skin</h3>
+        <p>Reduced oxygen delivery in blood.</p>
+      </div>
+
+      <div class="card">
+        <h3>Slow Growth</h3>
+        <p>Common in children with severe cases.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bone Deformities</h3>
+        <p>Bone marrow expansion due to anemia.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DIAGNOSIS -->
+  <div class="box">
+    <h2>Diagnosis</h2>
+    <ul style="margin-left:20px; line-height:1.8;">
+      <li>Complete Blood Count (CBC)</li>
+      <li>Hemoglobin electrophoresis</li>
+      <li>Genetic testing (HBB/HBA mutations)</li>
+      <li>Peripheral blood smear</li>
+    </ul>
+  </div>
+
+  <!-- TREATMENT -->
+  <div class="box">
+    <h2>Treatment</h2>
+    <ul style="margin-left:20px; line-height:1.8;">
+      <li>Regular blood transfusions</li>
+      <li>Iron chelation therapy</li>
+      <li>Bone marrow transplant (curative)</li>
+      <li>Folic acid supplements</li>
+    </ul>
+  </div>
+
+  <!-- CHART -->
+  <div class="box">
+    <h2>Types of Thalassemia</h2>
+
+    <div class="chart-container">
+      <canvas id="thalChart"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GenEase | Gene & Disease Explorer
+</footer>
+
+<script>
+
+const ctx = document.getElementById('thalChart');
+
+new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ['Alpha Thalassemia', 'Beta Thalassemia', 'Minor Carrier', 'Major Severe'],
+    datasets: [{
+      data: [25, 35, 20, 20],
+      backgroundColor: [
+        '#10B981',
+        '#34D399',
+        '#6EE7B7',
+        '#A7F3D0'
+      ]
+    }]
+  },
+  options: {
+    responsive: true
+  }
+});
+
+</script>
+
+</body>
+</html>

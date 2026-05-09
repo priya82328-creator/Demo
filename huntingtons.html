@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sickle Cell Anemia - GenEase</title>
+<title>Huntington's Disease - GenEase</title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -23,7 +23,6 @@ body {
 }
 
 /* NAVBAR */
-
 .navbar {
   background: #10B981;
   padding: 18px 35px;
@@ -48,7 +47,6 @@ body {
   color: white;
   padding: 8px 15px;
   border-radius: 8px;
-  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -57,7 +55,6 @@ body {
 }
 
 /* HERO */
-
 .hero {
   text-align: center;
   padding: 60px 20px 30px;
@@ -78,7 +75,6 @@ body {
 }
 
 /* CONTAINER */
-
 .container {
   width: 90%;
   max-width: 1100px;
@@ -105,13 +101,11 @@ body {
   margin-bottom: 10px;
 }
 
-/* GRID CARDS */
-
+/* GRID */
 .grid {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 15px;
 }
 
 .card {
@@ -124,7 +118,8 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .card h3 {
@@ -136,8 +131,14 @@ body {
   color: #064E3B;
 }
 
-/* FOOTER */
+/* LIST */
+ul {
+  margin-left: 20px;
+  line-height: 1.8;
+  color: #334155;
+}
 
+/* FOOTER */
 footer {
   background: #065F46;
   color: white;
@@ -146,8 +147,13 @@ footer {
   margin-top: 40px;
 }
 
-/* MOBILE */
+/* CHART */
+.chart-container {
+  width: 100%;
+  margin-top: 20px;
+}
 
+/* MOBILE */
 @media(max-width:700px){
   .navbar {
     flex-direction: column;
@@ -157,21 +163,6 @@ footer {
   .hero h1 {
     font-size: 34px;
   }
-}
-
-/* DIAGNOSIS SECTION */
-
-.diagnosis-list {
-  margin-left: 20px;
-  line-height: 1.8;
-  color: #334155;
-}
-
-/* CHART */
-
-.chart-container{
-  width: 100%;
-  margin-top: 20px;
 }
 
 </style>
@@ -194,42 +185,48 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Sickle Cell Anemia</h1>
+  <h1>Huntington's Disease</h1>
   <p>
-    A genetic blood disorder caused by mutation in the HBB gene that changes hemoglobin structure and affects oxygen transport in the body.
+    A progressive genetic neurodegenerative disorder caused by mutation in the HTT gene, leading to movement disorders, cognitive decline, and behavioral changes.
   </p>
 </section>
 
 <!-- CONTENT -->
 <div class="container">
 
-  <!-- WHAT IT IS -->
+  <!-- WHAT IS IT -->
   <div class="box">
-    <h2>What is Sickle Cell Anemia?</h2>
+    <h2>What is Huntington's Disease?</h2>
     <p>
-      Sickle Cell Anemia is an inherited blood disorder where red blood cells become hard, sticky, and shaped like a sickle (crescent moon).
+      Huntington’s Disease is a hereditary brain disorder that causes progressive degeneration of nerve cells in the brain.
     </p>
     <p>
-      These abnormal cells block blood flow in small vessels, reduce oxygen delivery, and break down faster than normal cells.
+      It affects movement, thinking ability, and emotions, gradually worsening over time.
     </p>
   </div>
 
   <!-- GENE -->
   <div class="box">
-    <h2>Gene Involved</h2>
+    <h2>Gene Involved (HTT Gene)</h2>
 
     <p>
-      The disease is caused by a mutation in the <b>HBB gene</b> located on chromosome 11.
-      This gene produces beta-globin, a key part of hemoglobin.
+      Huntington’s Disease is caused by a mutation in the <b>HTT gene</b> located on chromosome 4 (4p16.3).
     </p>
 
     <p>
-      A single point mutation changes normal hemoglobin (HbA) into abnormal hemoglobin (HbS).
+      The HTT gene normally produces the huntingtin protein, which is essential for neuron function and brain development.
     </p>
 
     <p>
-      When oxygen levels are low, HbS causes red blood cells to become rigid and sickle-shaped,
-      leading to blockages and tissue damage.
+      In affected individuals, there is an abnormal expansion of <b>CAG repeats</b>. Normal range is 10–35 repeats, but in Huntington’s disease it increases to 36–120+ repeats.
+    </p>
+
+    <p>
+      This results in a toxic form of huntingtin protein that damages neurons, especially in the <b>basal ganglia</b>, leading to motor and cognitive symptoms.
+    </p>
+
+    <p>
+      A key feature is <b>genetic anticipation</b>, where the disease becomes more severe and appears earlier in successive generations.
     </p>
   </div>
 
@@ -240,33 +237,28 @@ footer {
     <div class="grid">
 
       <div class="card">
-        <h3>Pain Crises</h3>
-        <p>Severe pain due to blocked blood flow.</p>
+        <h3>Chorea</h3>
+        <p>Uncontrolled jerking movements.</p>
       </div>
 
       <div class="card">
-        <h3>Chronic Anemia</h3>
-        <p>Fatigue due to rapid RBC breakdown.</p>
+        <h3>Memory Loss</h3>
+        <p>Progressive cognitive decline.</p>
       </div>
 
       <div class="card">
-        <h3>Swelling</h3>
-        <p>Painful swelling in hands and feet.</p>
+        <h3>Mood Changes</h3>
+        <p>Depression, irritability, anxiety.</p>
       </div>
 
       <div class="card">
-        <h3>Infections</h3>
-        <p>Weak immunity increases infection risk.</p>
+        <h3>Speech Difficulty</h3>
+        <p>Slurred speech and swallowing issues.</p>
       </div>
 
       <div class="card">
-        <h3>Delayed Growth</h3>
-        <p>Low oxygen slows development.</p>
-      </div>
-
-      <div class="card">
-        <h3>Vision Issues</h3>
-        <p>Blocked vessels may damage eyes.</p>
+        <h3>Loss of Coordination</h3>
+        <p>Balance and walking problems.</p>
       </div>
 
     </div>
@@ -277,54 +269,62 @@ footer {
     <h2>Inheritance Pattern</h2>
 
     <p>
-      Sickle Cell Anemia follows an <b>autosomal recessive inheritance pattern</b>.
+      Huntington’s Disease follows an <b>autosomal dominant inheritance pattern</b>.
     </p>
 
     <p>
-      A person must inherit <b>two mutated HBB genes</b> (one from each parent) to develop the disease.
+      Only one mutated copy of the HTT gene is enough to cause the disease.
     </p>
 
     <p>
-      A person with only one copy is a <b>carrier (sickle cell trait)</b>.
+      If one parent is affected, each child has a <b>50% chance</b> of inheriting the mutation.
     </p>
-  </div>
 
-  <!-- TREATMENT -->
-  <div class="box">
-    <h2>Treatment</h2>
+    <p>
+      The disease often appears between ages 30–50, but may occur earlier in cases of high CAG expansion.
+    </p>
 
-    <ul style="margin-left:20px; line-height:1.8; color:#334155;">
-      <li>Pain relief medications</li>
-      <li>Hydroxyurea therapy</li>
-      <li>Blood transfusions</li>
-      <li>Hydration and oxygen therapy</li>
-      <li>Bone marrow transplant (curative option)</li>
+    <p>
+      <b>Genetic anticipation:</b>
+    </p>
+
+    <ul>
+      <li>Expansion of CAG repeats across generations</li>
+      <li>Earlier onset in children than parents</li>
+      <li>Increasing severity in next generation</li>
     </ul>
   </div>
 
   <!-- DIAGNOSIS -->
   <div class="box">
     <h2>Diagnosis</h2>
-
-    <ul class="diagnosis-list">
-      <li>Complete Blood Count (CBC) to check anemia</li>
-      <li>Hemoglobin electrophoresis to detect HbS</li>
-      <li>Genetic testing for HBB mutation</li>
-      <li>Blood smear showing sickle-shaped RBCs</li>
-      <li>Newborn screening in early detection programs</li>
+    <ul>
+      <li>Genetic testing for HTT mutation</li>
+      <li>Neurological examination</li>
+      <li>MRI brain imaging</li>
+      <li>Cognitive testing</li>
     </ul>
   </div>
 
-  <!-- NEW CHART -->
+  <!-- TREATMENT -->
   <div class="box">
-    <h2>Sickle Cell Trait Prevalence Across Populations</h2>
+    <h2>Treatment</h2>
+    <ul>
+      <li>No permanent cure available</li>
+      <li>Medications for movement control</li>
+      <li>Antidepressants for mood symptoms</li>
+      <li>Speech and physical therapy</li>
+      <li>Psychological support</li>
+    </ul>
+  </div>
 
-    <p>
-      Comparison of estimated prevalence among different population groups.
-    </p>
+  <!-- CHART -->
+  <div class="box">
+    <h2>Age of Onset Pattern</h2>
+    <p>Distribution of typical Huntington’s disease onset ages.</p>
 
     <div class="chart-container">
-      <canvas id="sickleChart"></canvas>
+      <canvas id="huntChart"></canvas>
     </div>
   </div>
 
@@ -337,71 +337,34 @@ footer {
 
 <script>
 
-const ctx = document.getElementById('sickleChart');
+const ctx = document.getElementById('huntChart');
 
 new Chart(ctx, {
-
   type: 'bar',
-
   data: {
-
-    labels: [
-      'African',
-      'Middle Eastern / Indian',
-      'Mediterranean',
-      'Asian',
-      'Northern European'
-    ],
-
+    labels: ['20–30', '30–40', '40–50', '50–60', '60+'],
     datasets: [{
-
-      label: 'Estimated Prevalence (%)',
-
-      data: [8.5, 3.5, 1.5, 0.5, 0.2],
-
-      backgroundColor: [
-        '#16A34A',
-        '#22C55E',
-        '#4ADE80',
-        '#86EFAC',
-        '#BBF7D0'
-      ],
-
+      label: 'Cases (%)',
+      data: [5, 15, 35, 30, 15],
+      backgroundColor: '#22C55E',
       borderRadius: 10
-
     }]
-
   },
-
   options: {
-
     responsive: true,
-
     plugins: {
-
-      legend: {
-        display: false
-      }
-
+      legend: { display: false }
     },
-
     scales: {
-
       y: {
-
         beginAtZero: true,
-
         title: {
           display: true,
-          text: 'Prevalence (%)'
+          text: 'Percentage (%)'
         }
-
       }
-
     }
-
   }
-
 });
 
 </script>

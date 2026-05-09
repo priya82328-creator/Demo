@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sickle Cell Anemia - GenEase</title>
+<title>Hemophilia - GenEase</title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -23,7 +23,6 @@ body {
 }
 
 /* NAVBAR */
-
 .navbar {
   background: #10B981;
   padding: 18px 35px;
@@ -48,7 +47,6 @@ body {
   color: white;
   padding: 8px 15px;
   border-radius: 8px;
-  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -57,7 +55,6 @@ body {
 }
 
 /* HERO */
-
 .hero {
   text-align: center;
   padding: 60px 20px 30px;
@@ -78,7 +75,6 @@ body {
 }
 
 /* CONTAINER */
-
 .container {
   width: 90%;
   max-width: 1100px;
@@ -102,16 +98,13 @@ body {
 .box p {
   line-height: 1.7;
   color: #334155;
-  margin-bottom: 10px;
 }
 
 /* GRID CARDS */
-
 .grid {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 15px;
 }
 
 .card {
@@ -124,7 +117,8 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .card h3 {
@@ -136,8 +130,14 @@ body {
   color: #064E3B;
 }
 
-/* FOOTER */
+/* LIST */
+ul {
+  margin-left: 20px;
+  line-height: 1.8;
+  color: #334155;
+}
 
+/* FOOTER */
 footer {
   background: #065F46;
   color: white;
@@ -146,8 +146,13 @@ footer {
   margin-top: 40px;
 }
 
-/* MOBILE */
+/* CHART */
+.chart-container {
+  width: 100%;
+  margin-top: 20px;
+}
 
+/* MOBILE */
 @media(max-width:700px){
   .navbar {
     flex-direction: column;
@@ -157,21 +162,6 @@ footer {
   .hero h1 {
     font-size: 34px;
   }
-}
-
-/* DIAGNOSIS SECTION */
-
-.diagnosis-list {
-  margin-left: 20px;
-  line-height: 1.8;
-  color: #334155;
-}
-
-/* CHART */
-
-.chart-container{
-  width: 100%;
-  margin-top: 20px;
 }
 
 </style>
@@ -194,23 +184,23 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Sickle Cell Anemia</h1>
+  <h1>Hemophilia</h1>
   <p>
-    A genetic blood disorder caused by mutation in the HBB gene that changes hemoglobin structure and affects oxygen transport in the body.
+    A genetic bleeding disorder caused by deficiency of clotting factors, leading to excessive bleeding even from minor injuries.
   </p>
 </section>
 
 <!-- CONTENT -->
 <div class="container">
 
-  <!-- WHAT IT IS -->
+  <!-- WHAT IS IT -->
   <div class="box">
-    <h2>What is Sickle Cell Anemia?</h2>
+    <h2>What is Hemophilia?</h2>
     <p>
-      Sickle Cell Anemia is an inherited blood disorder where red blood cells become hard, sticky, and shaped like a sickle (crescent moon).
+      Hemophilia is a rare inherited disorder where blood does not clot properly due to missing or defective clotting factors.
     </p>
     <p>
-      These abnormal cells block blood flow in small vessels, reduce oxygen delivery, and break down faster than normal cells.
+      This leads to prolonged bleeding after injuries, surgery, or even spontaneous internal bleeding.
     </p>
   </div>
 
@@ -219,17 +209,20 @@ footer {
     <h2>Gene Involved</h2>
 
     <p>
-      The disease is caused by a mutation in the <b>HBB gene</b> located on chromosome 11.
-      This gene produces beta-globin, a key part of hemoglobin.
+      Hemophilia is mainly caused by mutations in:
+    </p>
+
+    <ul>
+      <li><b>F8 gene</b> → Hemophilia A (Factor VIII deficiency)</li>
+      <li><b>F9 gene</b> → Hemophilia B (Factor IX deficiency)</li>
+    </ul>
+
+    <p>
+      These genes are responsible for producing clotting proteins essential for forming blood clots.
     </p>
 
     <p>
-      A single point mutation changes normal hemoglobin (HbA) into abnormal hemoglobin (HbS).
-    </p>
-
-    <p>
-      When oxygen levels are low, HbS causes red blood cells to become rigid and sickle-shaped,
-      leading to blockages and tissue damage.
+      When these genes are mutated, clotting factors are reduced or absent, leading to uncontrolled bleeding.
     </p>
   </div>
 
@@ -240,33 +233,28 @@ footer {
     <div class="grid">
 
       <div class="card">
-        <h3>Pain Crises</h3>
-        <p>Severe pain due to blocked blood flow.</p>
+        <h3>Excess Bleeding</h3>
+        <p>Prolonged bleeding from cuts or injuries.</p>
       </div>
 
       <div class="card">
-        <h3>Chronic Anemia</h3>
-        <p>Fatigue due to rapid RBC breakdown.</p>
+        <h3>Joint Pain</h3>
+        <p>Bleeding into joints causing swelling.</p>
       </div>
 
       <div class="card">
-        <h3>Swelling</h3>
-        <p>Painful swelling in hands and feet.</p>
+        <h3>Bruising Easily</h3>
+        <p>Large bruises from minor injuries.</p>
       </div>
 
       <div class="card">
-        <h3>Infections</h3>
-        <p>Weak immunity increases infection risk.</p>
+        <h3>Nose Bleeds</h3>
+        <p>Frequent and hard-to-stop nosebleeds.</p>
       </div>
 
       <div class="card">
-        <h3>Delayed Growth</h3>
-        <p>Low oxygen slows development.</p>
-      </div>
-
-      <div class="card">
-        <h3>Vision Issues</h3>
-        <p>Blocked vessels may damage eyes.</p>
+        <h3>Internal Bleeding</h3>
+        <p>Dangerous bleeding inside body organs.</p>
       </div>
 
     </div>
@@ -277,28 +265,26 @@ footer {
     <h2>Inheritance Pattern</h2>
 
     <p>
-      Sickle Cell Anemia follows an <b>autosomal recessive inheritance pattern</b>.
+      Hemophilia follows an <b>X-linked recessive inheritance pattern</b>.
     </p>
 
     <p>
-      A person must inherit <b>two mutated HBB genes</b> (one from each parent) to develop the disease.
+      The gene is located on the X chromosome, so males are mostly affected because they have only one X chromosome.
     </p>
 
     <p>
-      A person with only one copy is a <b>carrier (sickle cell trait)</b>.
+      Females are usually carriers because they have two X chromosomes.
     </p>
-  </div>
 
-  <!-- TREATMENT -->
-  <div class="box">
-    <h2>Treatment</h2>
+    <p>
+      Key inheritance rules:
+    </p>
 
-    <ul style="margin-left:20px; line-height:1.8; color:#334155;">
-      <li>Pain relief medications</li>
-      <li>Hydroxyurea therapy</li>
-      <li>Blood transfusions</li>
-      <li>Hydration and oxygen therapy</li>
-      <li>Bone marrow transplant (curative option)</li>
+    <ul>
+      <li>Male (XY) with mutated X → affected</li>
+      <li>Female (XX) with one mutation → carrier</li>
+      <li>Father cannot pass disease to son</li>
+      <li>Carrier mother → 50% chance of affected son</li>
     </ul>
   </div>
 
@@ -306,25 +292,34 @@ footer {
   <div class="box">
     <h2>Diagnosis</h2>
 
-    <ul class="diagnosis-list">
-      <li>Complete Blood Count (CBC) to check anemia</li>
-      <li>Hemoglobin electrophoresis to detect HbS</li>
-      <li>Genetic testing for HBB mutation</li>
-      <li>Blood smear showing sickle-shaped RBCs</li>
-      <li>Newborn screening in early detection programs</li>
+    <ul>
+      <li>Blood clotting tests (aPTT)</li>
+      <li>Factor VIII and IX level testing</li>
+      <li>Genetic testing for F8/F9 mutation</li>
+      <li>Family history analysis</li>
     </ul>
   </div>
 
-  <!-- NEW CHART -->
+  <!-- TREATMENT -->
   <div class="box">
-    <h2>Sickle Cell Trait Prevalence Across Populations</h2>
+    <h2>Treatment</h2>
 
-    <p>
-      Comparison of estimated prevalence among different population groups.
-    </p>
+    <ul>
+      <li>Clotting factor replacement therapy</li>
+      <li>Preventive factor infusions</li>
+      <li>Desmopressin (for mild Hemophilia A)</li>
+      <li>Gene therapy (emerging treatment)</li>
+      <li>Avoid injury-prone activities</li>
+    </ul>
+  </div>
+
+  <!-- CHART -->
+  <div class="box">
+    <h2>Severity Distribution</h2>
+    <p>Distribution of mild, moderate, and severe cases.</p>
 
     <div class="chart-container">
-      <canvas id="sickleChart"></canvas>
+      <canvas id="hemoChart"></canvas>
     </div>
   </div>
 
@@ -337,71 +332,34 @@ footer {
 
 <script>
 
-const ctx = document.getElementById('sickleChart');
+const ctx = document.getElementById('hemoChart');
 
 new Chart(ctx, {
-
   type: 'bar',
-
   data: {
-
-    labels: [
-      'African',
-      'Middle Eastern / Indian',
-      'Mediterranean',
-      'Asian',
-      'Northern European'
-    ],
-
+    labels: ['Mild', 'Moderate', 'Severe'],
     datasets: [{
-
-      label: 'Estimated Prevalence (%)',
-
-      data: [8.5, 3.5, 1.5, 0.5, 0.2],
-
-      backgroundColor: [
-        '#16A34A',
-        '#22C55E',
-        '#4ADE80',
-        '#86EFAC',
-        '#BBF7D0'
-      ],
-
+      label: 'Cases (%)',
+      data: [40, 35, 25],
+      backgroundColor: '#22C55E',
       borderRadius: 10
-
     }]
-
   },
-
   options: {
-
     responsive: true,
-
     plugins: {
-
-      legend: {
-        display: false
-      }
-
+      legend: { display: false }
     },
-
     scales: {
-
       y: {
-
         beginAtZero: true,
-
         title: {
           display: true,
-          text: 'Prevalence (%)'
+          text: 'Percentage (%)'
         }
-
       }
-
     }
-
   }
-
 });
 
 </script>

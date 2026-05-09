@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Down Syndrome - GenEase</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ECFDF5;
+  color: #0F172A;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #10B981;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background: #E5E7EB;
+  color: #0F172A;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #065F46;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  color: #064E3B;
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  color: #065F46;
+  margin-bottom: 12px;
+}
+
+.box p {
+  line-height: 1.7;
+  color: #334155;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #D1FAE5;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #A7F3D0;
+}
+
+.card h3 {
+  color: #065F46;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #064E3B;
+}
+
+/* FOOTER */
+footer {
+  background: #065F46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* CHART */
+.chart-container {
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">GenEase</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Down Syndrome</h1>
+  <p>
+    Down Syndrome is a genetic disorder caused by the presence of an extra copy of chromosome 21
+    (Trisomy 21), affecting physical and intellectual development.
+  </p>
+</section>
+
+<div class="container">
+
+  <!-- WHAT -->
+  <div class="box">
+    <h2>What is Down Syndrome?</h2>
+    <p>
+      Down Syndrome is a chromosomal condition where a person has 47 chromosomes instead of 46.
+      The extra chromosome affects brain development and body growth.
+    </p>
+  </div>
+
+  <!-- GENE / CAUSE -->
+  <div class="box">
+    <h2>Genetic Cause</h2>
+    <p>
+      Down Syndrome is not caused by a single gene mutation but by an error in cell division called
+      <b>nondisjunction</b>, resulting in an extra chromosome 21.
+    </p>
+    <p>
+      This affects many genes on chromosome 21, leading to developmental differences.
+    </p>
+  </div>
+
+  <!-- INHERITANCE -->
+  <div class="box">
+    <h2>Inheritance Pattern</h2>
+    <p>
+      Down Syndrome is usually <b>not inherited</b>. It occurs randomly during egg or sperm formation.
+    </p>
+    <p>
+      Rarely, it can occur due to <b>translocation</b>, which may have a genetic link.
+    </p>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <div class="box">
+    <h2>Symptoms</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Intellectual Delay</h3>
+        <p>Mild to moderate learning difficulties.</p>
+      </div>
+
+      <div class="card">
+        <h3>Flat Face</h3>
+        <p>Distinct facial features including flat nasal bridge.</p>
+      </div>
+
+      <div class="card">
+        <h3>Muscle Weakness</h3>
+        <p>Low muscle tone at birth.</p>
+      </div>
+
+      <div class="card">
+        <h3>Heart Defects</h3>
+        <p>Congenital heart problems in some cases.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DIAGNOSIS -->
+  <div class="box">
+    <h2>Diagnosis</h2>
+    <p>
+      Down Syndrome can be diagnosed before or after birth using:
+    </p>
+    <ul style="margin-left:20px; line-height:1.8;">
+      <li>Ultrasound screening</li>
+      <li>Blood tests (prenatal screening)</li>
+      <li>Amniocentesis</li>
+      <li>Karyotyping (confirmatory test)</li>
+    </ul>
+  </div>
+
+  <!-- TREATMENT -->
+  <div class="box">
+    <h2>Management</h2>
+    <p>
+      There is no cure, but supportive care improves quality of life:
+    </p>
+    <ul style="margin-left:20px; line-height:1.8;">
+      <li>Speech therapy</li>
+      <li>Physical therapy</li>
+      <li>Special education programs</li>
+      <li>Medical treatment for complications</li>
+    </ul>
+  </div>
+
+  <!-- CHART -->
+  <div class="box">
+    <h2>Occurrence by Maternal Age</h2>
+
+    <div class="chart-container">
+      <canvas id="dsChart"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 GenEase | Gene & Disease Explorer
+</footer>
+
+<script>
+
+const ctx = document.getElementById('dsChart');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['20', '25', '30', '35', '40', '45'],
+    datasets: [{
+      label: 'Risk (%)',
+      data: [0.1, 0.1, 0.3, 1.0, 3.0, 10.0],
+      borderColor: '#10B981',
+      tension: 0.3,
+      fill: true,
+      backgroundColor: 'rgba(16,185,129,0.2)'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>

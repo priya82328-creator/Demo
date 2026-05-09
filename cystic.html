@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cystic Fibrosis - GenEase</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ECFDF5;
+  color: #0F172A;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #10B981;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background: #E5E7EB;
+  color: #0F172A;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #065F46;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  color: #064E3B;
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  color: #065F46;
+  margin-bottom: 12px;
+}
+
+.box p {
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* SYMPTOM CARD + HOVER EFFECT */
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #D1FAE5;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background: #BBF7D0;
+}
+
+.card h3 {
+  color: #065F46;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #064E3B;
+}
+
+/* CHART */
+.chart-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #065F46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">GenEase</div>
+
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Cystic Fibrosis</h1>
+  <p>
+    A genetic disorder caused by mutations in the CFTR gene leading to thick mucus buildup in lungs and digestive system.
+  </p>
+</section>
+
+<div class="container">
+
+  <!-- WHAT IT IS -->
+  <div class="box">
+    <h2>What is Cystic Fibrosis?</h2>
+    <p>
+      Cystic Fibrosis is a genetic disorder affecting lungs and digestive system.
+      It produces thick sticky mucus that blocks airways and causes repeated infections.
+    </p>
+  </div>
+
+  <!-- GENE -->
+  <div class="box">
+    <h2>Gene Involved (CFTR)</h2>
+
+    <p>
+      Caused by mutations in the <b>CFTR gene</b> on chromosome 7.
+    </p>
+
+    <p>
+      CFTR controls chloride ion movement and water balance in mucus.
+    </p>
+
+    <p>
+      When mutated:
+      <br>✔ Thick mucus forms
+      <br>✔ Airways get blocked
+      <br>✔ Bacteria get trapped
+    </p>
+
+    <p>
+      Common mutation: <b>ΔF508 deletion</b>
+    </p>
+  </div>
+
+  <!-- INHERITANCE -->
+  <div class="box">
+    <h2>Inheritance Pattern</h2>
+
+    <p>
+      Autosomal recessive disorder.
+    </p>
+
+    <p>
+      Requires two defective CFTR genes.
+    </p>
+
+    <p>
+      Outcomes:
+      <br>✔ AA → Normal
+      <br>✔ Aa → Carrier
+      <br>✔ aa → Affected
+    </p>
+  </div>
+
+  <!-- SYMPTOMS (WITH HOVER + DESCRIPTION) -->
+  <div class="box">
+    <h2>Symptoms</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Chronic Cough</h3>
+        <p>Persistent coughing due to thick mucus buildup in lungs.</p>
+      </div>
+
+      <div class="card">
+        <h3>Lung Infections</h3>
+        <p>Bacteria trapped in mucus cause frequent infections.</p>
+      </div>
+
+      <div class="card">
+        <h3>Breathing Issues</h3>
+        <p>Blocked airways reduce oxygen intake.</p>
+      </div>
+
+      <div class="card">
+        <h3>Poor Growth</h3>
+        <p>Digestive problems affect nutrient absorption.</p>
+      </div>
+
+      <div class="card">
+        <h3>Digestive Issues</h3>
+        <p>Pancreatic enzymes cannot reach intestines properly.</p>
+      </div>
+
+      <div class="card">
+        <h3>Thick Mucus</h3>
+        <p>Abnormal mucus becomes sticky and hard to clear.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TREATMENT -->
+  <div class="box">
+    <h2>Treatment</h2>
+
+    <ul style="margin-left:20px; line-height:1.8; color:#334155;">
+      <li>Airway clearance therapy</li>
+      <li>Antibiotics for infections</li>
+      <li>Mucus thinning drugs</li>
+      <li>CFTR modulator therapy</li>
+      <li>Pancreatic enzyme supplements</li>
+      <li>Lung transplant (severe cases)</li>
+    </ul>
+  </div>
+
+  <!-- DIAGNOSIS -->
+  <div class="box">
+    <h2>Diagnosis</h2>
+
+    <ul style="margin-left:20px; line-height:1.8; color:#334155;">
+      <li>Newborn screening</li>
+      <li>Sweat chloride test</li>
+      <li>CFTR genetic testing</li>
+      <li>Chest imaging (X-ray/CT)</li>
+      <li>Lung function test</li>
+    </ul>
+  </div>
+
+  <!-- CHART -->
+  <div class="box">
+    <h2>Organ Impact Severity</h2>
+
+    <div class="chart-container">
+      <canvas id="cfChart"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 GenEase | Gene & Disease Explorer</p>
+</footer>
+
+<script>
+
+const ctx = document.getElementById('cfChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Lungs', 'Pancreas', 'Liver', 'Intestine'],
+    datasets: [{
+      label: 'Impact Level',
+      data: [9, 8, 6, 5],
+      backgroundColor: ['#16A34A','#22C55E','#4ADE80','#86EFAC'],
+      borderRadius: 10
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 10
+      }
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>
