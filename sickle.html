@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sickle Cell Anemia - GenEase</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ECFDF5;
+  color: #0F172A;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #10B981;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #E5E7EB;
+  color: #0F172A;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #065F46;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  color: #064E3B;
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  color: #065F46;
+  margin-bottom: 12px;
+}
+
+.box p {
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+/* GRID CARDS */
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #D1FAE5;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #065F46;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #064E3B;
+}
+
+/* FOOTER */
+
+footer {
+  background: #065F46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">GenEase</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Sickle Cell Anemia</h1>
+  <p>
+    A genetic blood disorder caused by mutation in the HBB gene that changes hemoglobin structure and affects oxygen transport in the body.
+  </p>
+</section>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <!-- WHAT IT IS -->
+  <div class="box">
+    <h2>What is Sickle Cell Anemia?</h2>
+    <p>
+      Sickle Cell Anemia is an inherited blood disorder where red blood cells become hard, sticky, and shaped like a sickle (crescent moon).
+    </p>
+    <p>
+      These abnormal cells block blood flow in small vessels, reduce oxygen delivery, and break down faster than normal cells.
+    </p>
+  </div>
+
+  <!-- GENE -->
+  <div class="box">
+    <h2>Gene Involved</h2>
+
+    <p>
+      The disease is caused by a mutation in the <b>HBB gene</b> located on chromosome 11.
+      This gene produces beta-globin, a key part of hemoglobin.
+    </p>
+
+    <p>
+      A single point mutation changes normal hemoglobin (HbA) into abnormal hemoglobin (HbS).
+    </p>
+
+    <p>
+      When oxygen levels are low, HbS causes red blood cells to become rigid and sickle-shaped,
+      leading to blockages and tissue damage.
+    </p>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <div class="box">
+    <h2>Symptoms</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Pain Crises</h3>
+        <p>Severe pain due to blocked blood flow.</p>
+      </div>
+
+      <div class="card">
+        <h3>Chronic Anemia</h3>
+        <p>Fatigue due to rapid RBC breakdown.</p>
+      </div>
+
+      <div class="card">
+        <h3>Swelling</h3>
+        <p>Painful swelling in hands and feet.</p>
+      </div>
+
+      <div class="card">
+        <h3>Infections</h3>
+        <p>Weak immunity increases infection risk.</p>
+      </div>
+
+      <div class="card">
+        <h3>Delayed Growth</h3>
+        <p>Low oxygen slows development.</p>
+      </div>
+
+      <div class="card">
+        <h3>Vision Issues</h3>
+        <p>Blocked vessels may damage eyes.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INHERITANCE -->
+  <div class="box">
+    <h2>Inheritance Pattern</h2>
+
+    <p>
+      Sickle Cell Anemia follows an <b>autosomal recessive inheritance pattern</b>.
+    </p>
+
+    <p>
+      A person must inherit <b>two mutated HBB genes</b> (one from each parent) to develop the disease.
+    </p>
+
+    <p>
+      A person with only one copy is a <b>carrier (sickle cell trait)</b> and usually does not show symptoms.
+    </p>
+
+    <p><b>If both parents are carriers:</b></p>
+
+    <ul style="margin-left:20px; line-height:1.7; color:#334155;">
+      <li>25% chance of child having disease</li>
+      <li>50% chance of being carrier</li>
+      <li>25% chance of being normal</li>
+    </ul>
+  </div>
+
+  <!-- TREATMENT -->
+  <div class="box">
+    <h2>Treatment</h2>
+
+    <p>
+      There is no complete cure yet, but treatments help manage symptoms and improve quality of life.
+    </p>
+
+    <ul style="margin-left:20px; line-height:1.8; color:#334155;">
+
+      <li><b>Pain relief:</b> Medications for crisis pain management.</li>
+
+      <li><b>Hydroxyurea:</b> Reduces sickle cell formation.</li>
+
+      <li><b>Blood transfusions:</b> Replace abnormal RBCs with healthy ones.</li>
+
+      <li><b>Hydration & oxygen:</b> Improves circulation and reduces complications.</li>
+
+      <li><b>Bone marrow transplant:</b> Potential curative option in severe cases.</li>
+
+      <li><b>Vaccination & antibiotics:</b> Prevent infections.</li>
+
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 GenEase | Gene & Disease Explorer</p>
+</footer>
+
+</body>
+</html>

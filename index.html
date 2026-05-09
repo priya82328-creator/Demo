@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GenEase - Gene & Disease Explorer</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: linear-gradient(135deg, #06140f, #020c08);
+  color: white;
+}
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #22c55e;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #22c55e;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 150px 20px 110px; /* FIXED: added top spacing */
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #22c55e;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BUTTON */
+
+.btn {
+  margin-top: 25px;
+  padding: 12px 22px;
+  border: none;
+  background: #22c55e;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+/* GREEN INFO BANNER */
+
+.banner {
+  text-align: center;
+  background: rgba(34,197,94,0.1);
+  padding: 12px;
+  color: #22c55e;
+  font-size: 14px;
+}
+
+/* CARDS */
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 60px 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  width: 240px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #22c55e;
+  box-shadow: 0 0 15px rgba(34,197,94,0.25);
+}
+
+.card h3 {
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+/* FACT */
+
+.fact {
+  text-align: center;
+  margin: 40px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.5);
+  margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>GenEase</h2>
+
+  <div>
+    <a href="home.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+
+<!-- BANNER -->
+<div class="banner">
+  🌿 Explore genetics, mutations & human diseases in a simple way
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+  <h1>Decode Life Through Genes</h1>
+
+  <p>
+    Understand how DNA changes influence diseases and shape human biology.
+    A simple platform for learning genetics.
+  </p>
+
+  <a href="home.html" class="btn">Start Exploring</a>
+
+</div>
+
+<!-- CARDS -->
+<div class="container">
+
+  <div class="card">
+    <h3>🧬 Genes</h3>
+    <p>Basic units of heredity responsible for traits.</p>
+  </div>
+
+  <div class="card">
+    <h3>🧠 Diseases</h3>
+    <p>Health conditions often caused by gene mutations.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔬 Mutations</h3>
+    <p>Changes in DNA that can affect health or traits.</p>
+  </div>
+
+  <div class="card">
+    <h3>🌱 Biology</h3>
+    <p>Study of life, cells, and genetic functions.</p>
+  </div>
+
+</div>
+
+<!-- FACT -->
+<div class="fact" id="fact">
+  Did you know? Humans share 99.9% of their DNA.
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 GenEase | Built for Watson Code Fest
+</footer>
+
+<script>
+
+const facts = [
+  "Humans share 99.9% DNA.",
+  "You have around 20,000 genes.",
+  "DNA decides traits like eye color.",
+  "Some mutations are harmless."
+];
+
+setInterval(() => {
+  document.getElementById("fact").innerText =
+    "Did you know? " +
+    facts[Math.floor(Math.random() * facts.length)];
+}, 3500);
+
+</script>
+
+</body>
+</html>
